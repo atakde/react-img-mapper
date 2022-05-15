@@ -14,8 +14,6 @@ const MyCustomMarker = ({ marker, markerStyle }) => {
       <div className="marker-information"
         style={{
           display: showHover ? "block" : "none",
-          top: markerStyle.top,
-          left: markerStyle.left,
         }}
       >
         <h2>{marker.name}</h2>
