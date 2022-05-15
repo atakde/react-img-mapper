@@ -1,0 +1,60 @@
+.marker-container {
+    position: relative;
+
+    &>img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &>.marker {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: pulse-red 2s infinite;
+    }
+
+    @keyframes pulse-red {
+        0% {
+            transform: scale(0.9) translate(-50%, -50%);
+            box-shadow: 0 0 0 0 rgb(255, 255, 255);
+        }
+
+        80% {
+            transform: scale(1) translate(-50%, -50%);
+            box-shadow: 0 0 0 10px rgba(216, 196, 196, 0);
+        }
+
+        100% {
+            transform: scale(0.9) translate(-50%, -50%);
+            box-shadow: 0 0 0 0 rgba(185, 155, 155, 0);
+        }
+    }
+}
+
+.marker-custom {
+    position: absolute;
+    margin: -20px;
+    padding: 20px;
+
+    &>.marker-circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: pulse-red 2s infinite;
+    }
+
+    &>.marker-information {
+        position: absolute;
+        z-index: 999999;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 15px;
+        border-radius: 4px;
+    }
+}
