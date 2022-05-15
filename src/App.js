@@ -28,6 +28,7 @@ const App = () => {
   return (
     <div className="container">
       <h1>Hey, welcomee to react img mapper!</h1>
+      <small>Click to add a new dot!</small>
       <ImgMapper
         src={ExampleImage}
         markers={markers}
