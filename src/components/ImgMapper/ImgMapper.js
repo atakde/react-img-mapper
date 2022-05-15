@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import * as PropTypes from "prop-types";
 import "./marker.scss";
 
 const ImgMapper = ({
@@ -86,6 +87,17 @@ const ImgMapper = ({
       })}
     </div>
   );
+};
+
+ImgMapper.propTypes = {
+  src: PropTypes.string.isRequired,
+  markers: PropTypes.array.isRequired,
+  setMarkers: PropTypes.func.isRequired,
+  onMarkerClick: PropTypes.func.isRequired,
+  onMarkerHover: PropTypes.func.isRequired,
+  additionalClass: PropTypes.string,
+  altAttribute: PropTypes.string,
+  MarkerComponent: PropTypes.elementType,
 };
 
 export default ImgMapper;
